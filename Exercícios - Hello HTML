@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Primeira Página</title>
+</head>
+<body>
+    <h1>Minha Primeira Página</h1>
+    <p>Olá! Eu sou Pedro, e estou criando minha primeira página web.</p>
+    <p>No meu tempo livre, gosto muito de sair com meus amigos. É uma atividade divertida e animada que me ajuda a relaxar e me divertir.</p>
+</body>
+</html>
