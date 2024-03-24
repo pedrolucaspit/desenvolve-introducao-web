@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>NOTICIAS ONLINE</title>
+    </head>
+    <body>
+        <header>
+            <img src="https://fastly.picsum.photos/id/9/50/50.jpg?hmac=jEie5zjvJNvYeZXYMbrMaIEnD0RqcIm24WMTxjxXz2k"/>
+            <h1>NOTICIAS ONLINE</h1>
+        </header>
+        <h2>Geração Z: </h2>
+        <h3>características, como treinar, liderar e dicas de integração</h3>
+        <p>
+            <strong>O mercado de trabalho exige cada vez mais pessoas modernas,</strong> bem preparadas, dinâmicas e, principalmente, por dentro das atualidades — 
+            características evidentes na geração Z, que vem ganhando cada vez mais espaço nas empresas.
+        </p>
+        <p>
+            A geração que surgiu em meio ao boom da <em>transformação digital tem agora um papel fundamental</em> no desenvolvimento e crescimento dos negócios,
+             pois adoram inovar e se sentirem desafiados — fatores essenciais de competitividade.
+        </p>
+        <p>
+            Se você deseja saber mais sobre a <strong>influência da geração Z</strong> no mercado de trabalho, este post vai ajudar! 
+            Confira tudo sobre um assunto tendência nos processos seletivos de empresas que buscam profissionais criativos e com toda a energia para alcançar ótimos resultados!
+        </p>
+        <p>
+            Nascida no <strong>século 21,</strong> a partir de 1995, a geração Z se tornará o maior grupo populacional do mundo entre <strong>2019 e 2020</strong>, 
+            segundo estudos e dados baseados na Organização das Nações Unidas (ONU) já <em>são 31,5% da população, só em 2019.</em>
+        </p>
+        <p>
+            <em>Fonte:gupy.com</em> 
+        </p>
+        <footer>
+            <u1>
+                <li><a href="https://www.linkedin.com/in/pedrolucas127/">Linkedin</a></li>
+                <li><a href="https://www.instagram.com">Instagrama</a><li>
+                <li><a href="https://www.twitter.com">Twitter</a></li>
+            </u1>
+        </footer>
+    </body>
+</html>
