@@ -1,0 +1,31 @@
+/* 1. Estilização dos links */
+a {
+  color: #ff5733; /* Cor de destaque padrão */
+  font-weight: bold; /* Negrito por padrão */
+  text-decoration: none; /* Remover sublinhado */
+  transition: color 0.3s ease; /* Transição suave de cor */
+}
+
+a:hover {
+  color: #ff9e75; /* Tonalidade mais clara ao sobrepor */
+}
+
+a:visited {
+  font-weight: normal; /* Links visitados não ficam em negrito */
+}
+
+/* 2. Destaque na primeira letra do primeiro parágrafo */
+p:first-of-type:first-letter {
+  font-size: 300%; /* Tamanho 3 vezes maior */
+  font-family: 'Arial', sans-serif; /* Fonte diferente */
+  float: left; /* Flutua à esquerda */
+}
+
+/* 3. Separação entre itens do menu */
+.menu-item {
+  border-top: 1px solid #ccc; /* Bordas superiores */
+}
+
+.menu-item:last-child {
+  border-bottom: 1px solid #ccc; /* Bordas inferiores */
+}
