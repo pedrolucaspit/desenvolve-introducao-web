@@ -1,0 +1,45 @@
+/* 1. Diretivas gerais para a página */
+body {
+  width: 80%; /* Largura geral da página */
+  max-width: 1280px; /* Máximo de 1280px de largura */
+  margin: 0 auto; /* Centraliza a página na tela */
+}
+
+.intro-section {
+  height: 550px; /* Altura da seção de introdução */
+}
+
+#design-archives {
+  display: none; /* Remove o container design-archives */
+}
+
+/* 2. Incremento no cabeçalho da página */
+header {
+  background-color: #333; /* Fundo escuro */
+  color: #fff; /* Fonte clara */
+}
+
+header h1 {
+  margin-right: 1em; /* Espaçamento lateral para o título principal */
+}
+
+/* 3. Melhorias nos menus */
+.design-menu li,
+.about-menu li {
+  list-style-type: none; /* Remove bullets dos itens de menu */
+  margin-bottom: 1em; /* Espaçamento entre os itens do menu */
+  text-align: center; /* Centraliza os itens */
+}
+
+/* 4. Inversão de cores no rodapé */
+footer {
+  background-color: #333; /* Fundo escuro */
+  color: #fff; /* Fonte clara */
+  padding: 4% 0; /* Espaçamento externo no rodapé */
+}
+
+footer a {
+  display: inline-block; /* Transforma links em caixas */
+  border: 2px solid #fff; /* Borda sólida de 2px */
+  padding: 0.5em; /* Espaçamento interno */
+}
