@@ -1,0 +1,168 @@
+import csv
+
+# Estruturas de dados para usuários e produtos
+usuarios = []
+produtos = []
+
+# Função para carregar usuários de um arquivo CSV
+def carregar_usuarios():
+    global usuarios
+    with open('usuarios.csv', newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        usuarios = list(reader)
+
+# Função para carregar produtos de um arquivo CSV
+def carregar_produtos():
+    global produtos
+    with open('produtos.csv', newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+        produtos = list(reader)
+
+# Função para salvar usuários em um arquivo CSV
+def salvar_usuarios():
+    global usuarios
+    with open('usuarios.csv', 'w', newline='') as csvfile:
+        fieldnames = ['id', 'nome', 'usuario', 'senha', 'permissao']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(usuarios)
+
+# Função para salvar produtos em um arquivo CSV
+def salvar_produtos():
+    global produtos
+    with open('produtos.csv', 'w', newline='') as csvfile:
+        fieldnames = ['codigo', 'titulo', 'autor', 'preco', 'quantidade']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(produtos)
+
+# Função para adicionar um novo usuário
+def adicionar_usuario():
+    id = input("ID: ")
+    nome = input("Nome: ")
+    usuario = input("Usuário: ")
+    senha = input("Senha: ")
+    permissao = input("Permissão: ")
+    usuarios.append({"id": id, "nome": nome, "usuario": usuario, "senha": senha, "permissao": permissao})
+    salvar_usuarios()
+
+# Função para listar todos os usuários
+def listar_usuarios():
+    for usuario in usuarios:
+        print(usuario)
+
+# Função para atualizar um usuário
+def atualizar_usuario():
+    id = input("ID do usuário a ser atualizado: ")
+    for usuario in usuarios:
+        if usuario["id"] == id:
+            usuario["nome"] = input("Novo nome: ")
+            usuario["usuario"] = input("Novo usuário: ")
+            usuario["senha"] = input("Nova senha: ")
+            usuario["permissao"] = input("Nova permissão: ")
+            salvar_usuarios()
+            return
+    print("Usuário não encontrado")
+
+# Função para remover um usuário
+def remover_usuario():
+    id = input("ID do usuário a ser removido: ")
+    global usuarios
+    usuarios = [usuario for usuario in usuarios if usuario["id"] != id]
+    salvar_usuarios()
+
+# Função para adicionar um novo produto
+def adicionar_produto():
+    codigo = input("Código: ")
+    titulo = input("Título: ")
+    autor = input("Autor: ")
+    preco = float(input("Preço: "))
+    quantidade = int(input("Quantidade: "))
+    produtos.append({"codigo": codigo, "titulo": titulo, "autor": autor, "preco": preco, "quantidade": quantidade})
+    salvar_produtos()
+
+# Função para listar todos os produtos
+def listar_produtos():
+    for produto in produtos:
+        print(produto)
+
+# Função para atualizar um produto
+def atualizar_produto():
+    codigo = input("Código do produto a ser atualizado: ")
+    for produto in produtos:
+        if produto["codigo"] == codigo:
+            produto["titulo"] = input("Novo título: ")
+            produto["autor"] = input("Novo autor: ")
+            produto["preco"] = float(input("Novo preço: "))
+            produto["quantidade"] = int(input("Nova quantidade: "))
+            salvar_produtos()
+            return
+    print("Produto não encontrado")
+
+# Função para remover um produto
+def remover_produto():
+    codigo = input("Código do produto a ser removido: ")
+    global produtos
+    produtos = [produto for produto in produtos if produto["codigo"] != codigo]
+    salvar_produtos()
+
+# Função para buscar um produto por código
+def buscar_produto():
+    codigo = input("Código do produto: ")
+    for produto in produtos:
+        if produto["codigo"] == codigo:
+            print(produto)
+            return
+    print("Produto não encontrado")
+
+# Função para listar produtos ordenados por nome
+def ordenar_produtos_por_nome():
+    for produto in sorted(produtos, key=lambda x: x["titulo"]):
+        print(produto)
+
+# Função para listar produtos ordenados por preço
+def ordenar_produtos_por_preco():
+    for produto in sorted(produtos, key=lambda x: x["preco"]):
+        print(produto)
+
+# Menu principal
+def menu():
+    while True:
+        print("1. Adicionar usuário")
+        print("2. Listar usuários")
+        print("3. Atualizar usuário")
+        print("4. Remover usuário")
+        print("5. Adicionar produto")
+        print("6. Listar produtos")
+        print("7. Atualizar produto")
+        print("8. Remover produto")
+        print("9. Buscar produto")
+        print("10. Ordenar produtos por nome")
+        print("11. Ordenar produtos por preço")
+        print("0. Sair")
+        opcao = input("Escolha uma opção: ")
+        if opcao == "1":
+            adicionar_usuario()
+        elif opcao == "2":
+            listar_usuarios()
+        elif opcao == "3":
+            atualizar_usuario()
+        elif opcao == "4":
+            remover_usuario()
+        elif opcao == "5":
+            adicionar_produto()
+        elif opcao == "6":
+            listar_produtos()
+        elif opcao == "7":
+            atualizar_produto()
+        elif opcao == "8":
+            remover_produto()
+        elif opcao == "9":
+            buscar_produto()
+        elif opcao == "10":
+            ordenar_produtos_por_nome()
+        elif opcao == "11":
+            ordenar_produtos_por_preco()
+        elif opcao == "0":
+            break
+        else:
