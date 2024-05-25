@@ -1,0 +1,38 @@
+/* Media query para telas inferiores a 768 pixels (layout mobile) */
+@media screen and (max-width: 768px) {
+  /* 1. Layout mobile */
+  .design-menu {
+    position: static; /* Remove reposicionamento */
+    width: auto; /* Largura automática */
+    padding: 0; /* Remove espaçamento interno */
+  }
+
+  .explanation {
+    margin-right: 0; /* Remove espaçamento à direita */
+    border-right: none; /* Remove a borda lateral */
+    display: flex; /* Altera a orientação do Flexbox para vertical */
+    flex-direction: column; /* Organiza os elementos de forma empilhada */
+  }
+
+  header {
+    height: auto; /* Remove altura fixa */
+  }
+
+  p {
+    margin-top: 0; /* Remove espaçamento inicial */
+  }
+}
+
+/* Media query para meios impressos */
+@media print {
+  /* Altera o estilo da fonte para uma serifada */
+  body {
+    font-family: Times, serif;
+  }
+
+  /* Inverte as cores do banner */
+  .banner {
+    background-color: #fff; /* Fundo claro */
+    color: #000; /* Texto escuro */
+  }
+}
