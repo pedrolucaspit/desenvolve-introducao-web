@@ -1,0 +1,21 @@
+/* 1. Defina o elemento .page-wrapper como referência para posicionamento */
+.page-wrapper {
+  position: relative; /* Elemento de referência para posicionamento */
+}
+
+/* 2. Reposicione o painel .explanation */
+.explanation {
+  width: 60%; /* Ocupa 60% da largura disponível */
+  margin-right: 35%; /* Espaço à direita */
+  border-right: 1px solid #1f295c; /* Borda à direita */
+  padding-right: 2%; /* Espaçamento interno à direita */
+}
+
+/* 3. Mova o menu de designs */
+.design-menu {
+  position: absolute; /* Posicionamento absoluto */
+  top: 0; /* Inicia na parte superior da página */
+  right: 0; /* Inicia à direita da página */
+  width: 30%; /* Ocupa 30% da largura disponível */
+  padding: 0 2%; /* Espaçamento interno horizontal */
+}
