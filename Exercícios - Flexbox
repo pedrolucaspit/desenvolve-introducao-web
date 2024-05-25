@@ -1,0 +1,49 @@
+/* 1. Flexbox no rodapé da seção principal */
+.footer {
+  display: flex;
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 20px; /* Espaçamento entre os itens */
+}
+
+.footer a {
+  flex: 1; /* Mesmo tamanho para os links */
+}
+
+/* 2. Layout de flexbox para a seção de benefícios */
+.benefits-section {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.benefits-text {
+  flex: 0 0 70%; /* 70% da largura disponível */
+}
+
+.benefits-title {
+  flex: 0 0 30%; /* 30% da largura disponível */
+  text-align: right; /* Alinha o texto à direita */
+}
+
+/* 3. Layout de flexbox para a seção de participação */
+.participation-section {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.participation-item {
+  flex: 1; /* Cada item ocupa 50% do espaço */
+  text-align: center; /* Centraliza o texto */
+}
+
+.participation-title {
+  flex: 0 0 100%; /* Título ocupa 100% da largura disponível */
+}
+
+/* 4. Linhas no topo e na parte inferior das seções */
+.benefits-section {
+  border-bottom: 1px solid #ccc; /* Linha na parte inferior */
+}
+
+.participation-section {
+  border-top: 1px solid #ccc; /* Linha na parte superior */
+}
