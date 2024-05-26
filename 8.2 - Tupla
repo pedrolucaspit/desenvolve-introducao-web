@@ -1,0 +1,60 @@
+# Q1
+def calcula_area_perimetro(dimensoes):
+    largura, comprimento = dimensoes
+    area = largura * comprimento
+    perimetro = 2 * (largura + comprimento)
+    return area, perimetro
+
+# Exemplo de uso:
+largura = 5
+comprimento = 7
+retorno = calcula_area_perimetro((largura, comprimento))
+print(retorno, type(retorno))
+
+# Q2
+def imprimir_vogais_indices(frase):
+    for indice, letra in enumerate(frase):
+        if letra.lower() in 'aeiou':
+            print(f"Vogal: {letra}, Índice: {indice}")
+
+frase = "O rato roeu a roupa da Alice"
+imprimir_vogais_indices(frase)
+
+# Q3
+def ordenar_tuplas(lista_tuplas):
+    return sorted(lista_tuplas, key=lambda x: x[1], reverse=True)
+
+# Exemplo de uso:
+alunos_notas = [('Alice', 8.5), ('Bob', 7.2), ('Charlie', 9.0), ('David', 8.8)]
+resultado = ordenar_tuplas(alunos_notas)
+print(resultado)
+
+# Q4
+def comprimir_tuplas(lista_tuplas):
+    comprimido = {}
+    for palavra, numero in lista_tuplas:
+        if palavra in comprimido:
+            comprimido[palavra] += numero
+        else:
+            comprimido[palavra] = numero
+    return list(comprimido.items())
+
+# Exemplo de uso:
+tuplas_originais = [('maçã', 3), ('banana', 2), ('maçã', 5), ('laranja', 1), ('banana', 3)]
+resultado = comprimir_tuplas(tuplas_originais)
+print(resultado)
+
+# Q5
+fila_balada = []
+while True:
+    nome = input("Digite o nome (ou 'fim' para terminar): ")
+    if nome.lower() == 'fim':
+        break
+    idade = int(input("Digite a idade: "))
+    fila_balada.append((nome, idade))
+
+menores_de_idade = [nome for nome, idade in fila_balada if idade < 18]
+maiores_de_idade = [nome for nome, idade in fila_balada if idade >= 18]
+
+print("Menores de idade:", menores_de_idade)
+print("Maiores de idade:", maiores_de_idade)
